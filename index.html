@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabu's Portfolio</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .switch-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+        <div class="switch-container">
+        <h1 id="title">Cabu's Portfolio</h1>
+        <label for="languageSwitch">Switch Language:</label>
+        <input type="checkbox" id="languageSwitch">
+    </div>
+    <hr>
+    <h2 id="intro-title">Welcome to my Portfolio.</h2>
+    <p id="intro-content">This Portfolio will evolve over time, just like me!</p>
+    <p id="about-link">You can read things about me <a href="./public/about.html">here</a>.</p>
+    <p id="contact-link">If you wish to contact me for any additional Infos, you can see my contact details <a href="./public/contact.html">here</a>.</p>
+    <p id="projects-description">On this page, you will see all the projects I took on my journey to become a Full-Stack Web Developer.</p>
+    <hr>
+    <h2 id="projects-title">My Projects</h2>
+    <p id="projects-description-text">Here are some of my projects:</p>
+    <ul>
+        <p id="course-projects-title">Course projects:</p>
+        <li><a href="./public/movie-ranking.html">Movie Ranking Project</a></li>
+        <li><a href="./public/birthday-invite.html">Birthday Invite Project</a></li>
+        <p id="other-projects-title">Other projects:</p>
+        <p id="other-project-1">A Tool to create Quiz Pools in the LMS365 with SAP Cloud Integration and Postman</p>
+        <p id="other-project-2">A permission concept for a start and stop tool for servers, allowing only specific individuals to set the automatic start and stop times for Linux servers.</p>
+        <p id="other-project-3">And some migrations and monitorings for some companies.</p>
+    </ul>
+    <p id="privacy-note">Some projects don't have their own project page because of corporate privacy.</p>
+    <hr>
+
+
+    <script>
+        // Funktion, um die Sprache umzuschalten
+        document.getElementById('languageSwitch').addEventListener('change', function() {
+            if (this.checked) {
+                // Wenn der Schalter auf "Deutsch" umgeschaltet ist
+                document.getElementById('title').innerText = 'Cabu\'s Portfolio';
+                document.getElementById('intro-title').innerText = 'Willkommen zu meinem Portfolio.';
+                document.getElementById('intro-content').innerText = 'Dieses Portfolio wird sich mit der Zeit weiterentwickeln, genau wie ich!';
+                document.getElementById('about-link').innerHTML = 'Du kannst hier mehr über mich lesen <a href="./public/about.html">hier</a>.';
+                document.getElementById('contact-link').innerHTML = 'Wenn du mich für zusätzliche Informationen kontaktieren möchtest, findest du meine Kontaktdaten <a href="./public/contact.html">hier</a>.';
+                document.getElementById('projects-description').innerText = 'Auf dieser Seite siehst du alle Projekte, die ich auf meiner Reise zum Full-Stack Web Developer gemacht habe.';
+                document.getElementById('projects-title').innerText = 'Meine Projekte';
+                document.getElementById('projects-description-text').innerText = 'Hier sind einige meiner Projekte:';
+                document.getElementById('course-projects-title').innerText = 'Kursprojekte:';
+                document.getElementById('other-projects-title').innerText = 'Weitere Projekte:';
+                document.getElementById('other-project-1').innerText = 'Ein Tool, um Quiz-Pools automatisiert im LMS365 mit SAP Cloud Integration und Postman zu erstellen';
+                document.getElementById('other-project-2').innerText = 'Ein Berechtigungskonzept für ein Start- und Stopp-Tool für Server, das nur bestimmten Personen erlaubt, die automatischen Start- und Stoppzeiten für Linux-Server festzulegen.';
+                document.getElementById('other-project-3').innerText = 'Und einige Migrationen und Monitorings für einige Unternehmen.';
+                document.getElementById('privacy-note').innerText = 'Einige Projekte haben keine eigene Projektseite aufgrund von Unternehmensrichtlinien.';
+            } else {
+                // Wenn der Schalter auf "Englisch" zurückgesetzt wird
+                document.getElementById('title').innerText = 'Cabu\'s Portfolio';
+                document.getElementById('intro-title').innerText = 'Welcome to my Portfolio.';
+                document.getElementById('intro-content').innerText = 'This Portfolio will evolve over time, just like me!';
+                document.getElementById('about-link').innerHTML = 'You can read things about me <a href="./public/about.html">here</a>.';
+                document.getElementById('contact-link').innerHTML = 'If you wish to contact me for any additional Infos, you can see my contact details <a href="./public/contact.html">here</a>.';
+                document.getElementById('projects-description').innerText = 'On this page, you will see all the projects I took on my journey to become a Full-Stack Web Developer.';
+                document.getElementById('projects-title').innerText = 'My Projects';
+                document.getElementById('projects-description-text').innerText = 'Here are some of my projects:';
+                document.getElementById('course-projects-title').innerText = 'Course projects:';
+                document.getElementById('other-projects-title').innerText = 'Other projects:';
+                document.getElementById('other-project-1').innerText = 'A Tool to create Quiz Pools automated in the LMS365 with SAP Cloud Integration and Postman';
+                document.getElementById('other-project-2').innerText = 'A permission concept for a start and stop tool for servers, allowing only specific individuals to set the automatic start and stop times for Linux servers.';
+                document.getElementById('other-project-3').innerText = 'And some migrations and monitorings for some companies.';
+                document.getElementById('privacy-note').innerText = 'Some projects don\'t have their own project page because of corporate privacy.';
+            }
+        });
+    </script>
+
+</body>
+</html>
