@@ -1,0 +1,13 @@
+ToDo:
+    + MyResume, Hobbies hat noch keine Übersetzung (Achtung vor Bugs 1&2) 
+    + MyResume hat noch kein Bild (Cabu-Affe)
+    + .gitIgnore txt?
+
+
+    Bug fixes:
+    1. Seite wird wieder english wenn man aktualisiert
+    2. Seite hat anfangs "Zurück zur Homepage" ->
+         statt "back to homepage" obwohl seite auf english ist
+    
+    Changes:
+    1. Index.html = Übersetzer umbauen auf (text ? text : text);
