@@ -1,2 +1,2 @@
 # Capstone-html-portfolio
-A evolving portfolio for Capstone
+An evolving portfolio for Capstone
