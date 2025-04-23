@@ -7,17 +7,41 @@
         body {
           font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
+        .switch-container {
+            margin-top: 30px;
+        }
     </style>
 </head>
 <body>
-    <h1>Contact</h1>
+    <div class="switch-container">
+        <h1 id="main-title">Contact</h1>
+        <label for="languageSwitch">Switch Language:</label>
+        <input type="checkbox" id="languageSwitch">
+    </div>
+
     <hr>
-    <h2>Welcome to my Contact Page</h2>
+    <h2 id="hello-title">Welcome to my Contact Page</h2>
     <hr>
-    <p>Contact:</p>
-    <p>Email: dev.cabu@gmail.com</p>
-    <p>Discord: cabu</p>
+    <p id="contact-text">Contact:</p>
+    <p id="email-text">Email: dev.cabu@gmail.com</p>
+    <p id="discord-text">Discord: cabu</p>
     <hr>
-    <a href="../index.html">Zurück zur Homepage</a>
+    <a href="../index.html" id="back-link">Zurück zur Homepage</a>
+
+    <script>
+        document.getElementById('languageSwitch').addEventListener('change', function () {
+            const german = this.checked;
+
+            // Titel und Texte je nach Sprache setzen
+            document.getElementById('main-title').innerText = german ? 'Kontakt' : 'Contact';
+            document.getElementById('hello-title').innerText = german ? 'Willkommen auf meiner Kontaktseite' : 'Welcome to my Contact Page';
+            document.getElementById('contact-text').innerText = german ? 'Kontakt:' : 'Contact:';
+            document.getElementById('email-text').innerText = german ? 'E-Mail: dev.cabu@gmail.com'  : 'E-Mail: dev.cabu@gmail.com';
+            document.getElementById('discord-text').innerText = german ? 'Discord: cabu' : 'Discord: cabu';
+
+            document.getElementById('back-link').innerText = german ? 'Zurück zur Homepage' : 'Back to Homepage';
+        });
+    </script>
+
 </body>
 </html>

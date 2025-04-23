@@ -8,33 +8,40 @@
         body {
           font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
+        .switch-container {
+            margin-top: 30px;
+        }
     </style>
 </head>
 <body>
-    <h1>About Me</h1>
+    <div class="switch-container">
+        <h1 id="main-title">About Me</h1>
+        <label for="languageSwitch">Switch Language</label>
+        <input type="checkbox" id="languageSwitch">
+    </div>  
 <hr>
-    <h2>Welcome to my About Me Page</h2>
-<hr>
-    <h3>Who am i?</h3>
-        <p>
+    <h2 id="hello-title">Welcome to my About Me Page</h2>
+    <hr>
+    <h3 id="who-title">Who am i?</h3>
+        <p id="who-text">
             My name is Mirco, professionally known as "Cabu" [Khabu]. 
             I am 25 years old and began my journey in software development in 2021.
         </p>
     <br>
 <hr>
-    <h3>What do i do?</h3>
-        <p>
+    <h3 id="do-title">What do i do?</h3>
+        <p id=do-text>
             I'm a Junior SAP Cloud Consultant and Full-Stack Web Newbie.
         </p>
 <hr>
-    <h3>What do i like?</h3>
-        <p>
+    <h3 id="like-title">What do i like?</h3>
+        <p id="like-text">
             I like to play games, listen to music and code.  
             I love to learn new things and improve my skills.
         </p>
 <hr>
-    <h3>What are you learning right now?</h3>
-        <p>
+    <h3 id="learning-title">What are you learning right now?</h3>
+        <p id="learning-text">
             I'm learning about Full-Stack Web Development, focusing on JavaScript, HTML, CSS
             I am also learning about SAP Cloud and its services.
     <br>
@@ -45,7 +52,28 @@
     
         </p>
 <hr>
-    <a href="../index.html">Zurück zur Homepage</a>
+    <a href="../index.html" id="back-link">Zurück zur Homepage</a>
 
+    <script>
+        document.getElementById('languageSwitch').addEventListener('change', function () {
+            const german = this.checked;
+
+            // Titel und Texte je nach Sprache setzen
+            document.getElementById('main-title').innerText = german ? 'Über mich' : 'About Me';
+            document.getElementById('hello-title').innerText = german ? 'Willkommen auf meiner Über-mich-Seite' : 'Welcome to my About Me Page';
+            document.getElementById('who-title').innerText = german ? 'Wer bin ich?' : 'Who am i?';
+            document.getElementById('who-text').innerText = german ? 'Mein Name ist Mirco, auch bekannt als "Cabu" [Khabu]. Ich bin 25 Jahre alt und habe 2021 mit der Softwareentwicklung begonnen.' : 'My name is Mirco, professionally known as "Cabu" [Khabu]. I am 25 years old and began my journey in software development in 2021.';
+            document.getElementById('do-title').innerText = german ? 'Was mache ich?' : 'What do i do?';
+            document.getElementById('do-text').innerText = german ? 'Ich bin Junior SAP Cloud Consultant und Full-Stack Web Newbie.' : "I'm a Junior SAP Cloud Consultant and Full-Stack Web Newbie.";
+            document.getElementById('like-title').innerText = german ? 'Was mag ich?' : 'What do i like?';
+            document.getElementById('like-text').innerText = german ? 'Ich spiele gerne Videospiele, höre gerne Musik und schreib gerne code. Ich mag es zudem neue dinge zu lernen und meine Skills zu verbessern.' : 'I like to play games, listen to music and code. I love to learn new things and improve my skills.';
+            document.getElementById('learning-title').innerText = german ? 'Was lerne ich gerade?' : 'What are you learning right now?';
+            document.getElementById('learning-text').innerText = german ? 'Ich lerne derzeit Full-Stack Webentwicklung, mit Fokus auf JavaScript, HTML und CSS. Außerdem beschäftige ich mich mit SAP Cloud und ihren Services. Aktueller Kurs:' : 'What are you learning right now?';
+
+
+            document.getElementById('back-link').innerText = german ? 'Zurück zur Homepage' : 'Back to Homepage';
+    
+                });
+        </script>
     </body>
 </html>
